@@ -45,7 +45,7 @@ BEGIN
     BEGIN
         DECLARE @dx FLOAT, @dy FLOAT, @phi FLOAT, @lam FLOAT;
 
-        -- Conversion logic here (similar to your procedure)
+        -- Conversion logic here
         SET @dx = 1E-5 * (@rdx - @x0);
         SET @dy = 1E-5 * (@rdy - @y0);
 
