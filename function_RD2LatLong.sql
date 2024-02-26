@@ -1,19 +1,21 @@
 /****** Procedure that creates a function 'ConvertCoordinatesTable' in schema 'dbo'. 
 The function converts RD coordinates ("Rijksdriehoekscoördinaten") in a table to lat-long coordinates.
-The input coordinates are fetched by cursor and put in @rdx, @rdy. So to get things going you have to adapt this for your situation:
+The input coordinates are fetched by cursor and put in @rdx, @rdy. 
+So to get things going you have to adapt this for your situation:
 
 DECLARE cur CURSOR FOR SELECT <identifing_column>, RD_X, RD_Y FROM <table>;
 
-Here columns RD_X and RD_Y contain the X,Y coordinates in the RD coordinate system. If these columns are named differently you'll have to refactor more in the code.
+Here columns RD_X and RD_Y contain the X,Y coordinates in the RD coordinate system. 
+If these columns are named differently you'll have to refactor more in the code.
 
 ******/
 CREATE FUNCTION [dbo].[ConvertCoordinatesTable]()
 RETURNS @ConvertedCoords TABLE
 (
-	OriginalX FLOAT,
-    OriginalY FLOAT,
-    Latitude FLOAT,
-    Longitude FLOAT
+OriginalX FLOAT,
+OriginalY FLOAT,
+Latitude FLOAT,
+Longitude FLOAT
 )
 AS
 BEGIN
