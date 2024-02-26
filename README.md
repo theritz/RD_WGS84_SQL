@@ -1,5 +1,7 @@
 # RD_WGS84_SQL
-Function to convert RijksDriehoekcoördinaten (RD) to Latitude-Longitude (WGS84) coordinates.
+Function to convert RijksDriehoeksCoördinaten (RD) to Latitude-Longitude (WGS84) coordinates.
+
+https://nl.wikipedia.org/wiki/Rijksdriehoekscoördinaten
 
 The RD coordinate system is widely used in The Netherlands. The central point of the grid is the Lange Jan church tower in Amersfoort. This is why the system is called the Amersfoort Coördinaten Systeem as well.
 
